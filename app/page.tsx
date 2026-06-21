@@ -1,5 +1,6 @@
 "use client";
 
+import ActivityTicker from "@/components/certificate/activityTicker";
 import HeroSection from "@/components/home/heroSection";
 import PaymentCard from "@/components/home/payment";
 import BiosphereAmbassador from "@/components/tree/treeStage";
@@ -15,6 +16,7 @@ export default function Home() {
       </main>
       <div className="">
         <BiosphereAmbassador />
+        <ActivityTicker />
       </div>
     </div>
   );
