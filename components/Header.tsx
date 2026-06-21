@@ -1,5 +1,5 @@
-import Link from 'next/link'
-import { Button } from './ui/button';
+import Link from "next/link";
+import { Button } from "./ui/button";
 import { TbLocation } from "react-icons/tb";
 
 export default function Header() {
@@ -11,8 +11,8 @@ export default function Header() {
           <Link href="/" className="ml-4 hover:underline">
             Trang chủ
           </Link>
-          <Link href="/project" className="ml-4 hover:underline">
-            Dự án
+          <Link href="/transparency" className="ml-4 hover:underline">
+            Minh bạch
           </Link>
           <Link href="/campaign" className="ml-4 hover:underline">
             Chiến dịch

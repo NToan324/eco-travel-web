@@ -1,6 +1,7 @@
 "use client";
 
 import ActivityTicker from "@/components/certificate/activityTicker";
+import TransparencyDashboard from "@/components/dashboard/TransparencyDashboard";
 import HeroSection from "@/components/home/heroSection";
 import PaymentCard from "@/components/home/payment";
 import BiosphereAmbassador from "@/components/tree/treeStage";
@@ -17,6 +18,7 @@ export default function Home() {
       <div className="">
         <BiosphereAmbassador />
         <ActivityTicker />
+        <TransparencyDashboard />
       </div>
     </div>
   );

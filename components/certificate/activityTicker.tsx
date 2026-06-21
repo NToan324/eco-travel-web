@@ -2,10 +2,13 @@
 
 import { useState, useEffect } from "react";
 import Image from "next/image";
-import { BsPatchCheck } from "react-icons/bs";
-import { Button } from "../ui/button";
-import { HiCheck, HiOutlineCheckCircle } from "react-icons/hi";
+import { HiOutlineCheckCircle } from "react-icons/hi";
 import { FiDownload } from "react-icons/fi";
+import CertificateButton from "./CertificateButton";
+import {
+  CertificateData,
+  generateCertificateImage,
+} from "@/lib/generateCertificate";
 
 const ACTIVITY_FEED = [
   { emoji: "🌱", text: <>Nguyễn Văn A vừa tài trợ một cây xanh thật.</> },
@@ -97,16 +100,27 @@ function XIcon() {
 
 export default function SocialSignalPage() {
   const [downloaded, setDownloaded] = useState(false);
-  const [certified, setCertified] = useState(false);
 
-  const handleDownload = () => {
+  const handleDownload = async () => {
     setDownloaded(true);
-    setTimeout(() => setDownloaded(false), 2000);
-  };
+    const data: CertificateData = {
+      userName: "Nguyễn Minh Anh",
+      ecoTitle: "Sổ giờ xanh",
+      achievementText: `Tôi đã trung hòa 45 kg CO2 cho hành trình đến TP. Hồ Chí Minh`,
+      destination: "TP. Hồ Chí Minh",
+      co2Kg: 45,
+      shareUrl:
+        typeof window !== "undefined" ?
+          window.location.origin
+        : "https://ecotrip.vn",
+    };
+    const url = await generateCertificateImage(data);
+    const link = document.createElement("a");
 
-  const handleCertificate = () => {
-    setCertified(true);
-    setTimeout(() => setCertified(false), 2000);
+    link.href = url;
+    link.download = "chung-nhan-xanh.png";
+    link.click();
+    setTimeout(() => setDownloaded(false), 2000);
   };
 
   return (
@@ -182,19 +196,12 @@ export default function SocialSignalPage() {
 
             {/* Các nút hành động dưới thẻ */}
             <div className="flex gap-3 mt-4">
-              <Button
-                onClick={handleCertificate}
-                className="h-14 px-6 flex-1 flex items-center justify-center gap-2 bg-[#1B4332] hover:bg-[#2D6A4F] text-white text-sm font-bold py-3.5 rounded-xl transition-colors"
-              >
-                <span>
-                  {certified ?
-                    <div className="flex items-center gap-1">
-                      <HiCheck /> <span> Đã nhận!</span>
-                    </div>
-                  : "Nhận chứng nhận xanh"}
-                </span>
-                {!certified && <BsPatchCheck strokeWidth="0.8" />}
-              </Button>
+              <CertificateButton
+                userName="Nguyễn Minh Anh"
+                ecoTitle="Sổ giờ xanh"
+                co2Kg={45}
+                destination="TP. Hồ Chí Minh"
+              />
               <button
                 onClick={handleDownload}
                 className="flex-1 flex items-center justify-center gap-2 border-2 border-[#1B4332] text-[#1B4332] text-sm font-bold py-3.5 rounded-xl hover:bg-[#f0faf4] transition-colors"

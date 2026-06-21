@@ -1,12 +1,16 @@
 import { CgCreditCard } from "react-icons/cg";
-
+import { useRouter } from "next/navigation";
 interface PaymentCTAButtonProps {
   offsetChecked: boolean | string;
 }
 
 export const PaymentCTAButton = ({ offsetChecked }: PaymentCTAButtonProps) => {
+  const router = useRouter();
   return (
-    <button className="w-full bg-green-800 hover:bg-green-900 text-white font-bold py-4 rounded-2xl flex items-center justify-center gap-2 transition-colors text-sm">
+    <button
+      className="w-full bg-green-800 hover:bg-green-900 text-white font-bold py-4 rounded-2xl flex items-center justify-center gap-2 transition-colors text-sm"
+      onClick={() => router.push("/payment")}
+    >
       Thanh toán ngay
       {offsetChecked === true || offsetChecked === "true" ?
         " + Bù đắp "
