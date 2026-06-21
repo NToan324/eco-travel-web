@@ -18,7 +18,7 @@ const EnvironmentalImpactCard = ({
   formatVND,
 }: EnvironmentalImpactCardProps) => {
   return (
-    <div className="bg-green-light border border-amber-200 rounded-xl p-4 space-y-3 relative">
+    <div className="bg-green-light border border-green-200 rounded-xl p-4 space-y-3 relative">
       <div className="flex items-start gap-3">
         <div>
           <p className="font-bold text-amber-800 text-sm flex items-center gap-1">
@@ -69,7 +69,7 @@ const EnvironmentalImpactCard = ({
         <span>.</span>
       </div>
 
-      <div className="bg-white border border-amber-200 rounded-lg px-4 py-2.5 flex items-center gap-2">
+      <div className="bg-white border border-green-200 rounded-lg px-4 py-2.5 flex items-center gap-2">
         <TbCircleCheck size={36} className="text-green-800" />
         <p className="text-xs text-gray-600">
           <span className="font-semibold">

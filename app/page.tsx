@@ -2,6 +2,7 @@
 
 import HeroSection from "@/components/home/heroSection";
 import PaymentCard from "@/components/home/payment";
+import BiosphereAmbassador from "@/components/tree/treeStage";
 
 export default function Home() {
   return (
@@ -12,6 +13,9 @@ export default function Home() {
         {/* Payment */}
         <PaymentCard />
       </main>
+      <div className="">
+        <BiosphereAmbassador />
+      </div>
     </div>
   );
 }
