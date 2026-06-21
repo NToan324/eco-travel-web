@@ -24,7 +24,7 @@ export default function TransparencyDashboard() {
     <div className="min-h-screen bg-[#f4f9f6] px-4 py-14 flex flex-col items-center">
       {/* Header */}
       <div className="text-center max-w-2xl mb-10">
-        <h1 className="text-3xl md:text-4xl font-black text-[#1B4332] leading-tight">
+        <h1 className="text-2xl sm:text-3xl md:text-4xl font-black text-[#1B4332] leading-tight">
           Minh bạch tuyệt đối chống greenwashing.
         </h1>
         <p className="mt-4 text-gray-500 text-sm md:text-base leading-relaxed">

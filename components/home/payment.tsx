@@ -23,7 +23,7 @@ export default function PaymentCard() {
     <div className="min-h-screen">
       <div className="bg-white rounded-2xl shadow-lg w-full p-6 space-y-5">
         <PaymentHeader
-          tripTitle="Tour ngày Rừng ngập mặn Cần Giờ + Đưa đón tại khách sạn"
+          tripTitle="Tour ngày rừng ngập mặn Cần Giờ, đưa đón tại khách sạn"
           tripSubtotal={tripSubtotal}
           formatVND={formatVND}
         />

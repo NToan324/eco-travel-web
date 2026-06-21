@@ -58,10 +58,9 @@ const EnvironmentalImpactCard = ({
               role="tooltip"
               className="absolute left-1/2 -translate-x-1/2 bottom-full mb-2 w-64 bg-gray-800 text-white text-xs rounded-xl px-4 py-3 leading-relaxed text-center shadow-xl z-10"
             >
-              Nếu không được đền bù, lượng khí thải này góp phần trực tiếp vào
-              suy thoái môi trường và mất hệ sinh thái. Thêm 30.000 VNĐ để bù
-              đắp toàn bộ chuyến đi này thông qua Quỹ Phục hồi Rừng ngập mặn Cần
-              Giờ.
+              Mỗi chuyến đi đều để lại dấu chân Carbon nhất định. Thêm 30.000
+              VNĐ để cùng Quỹ Phục hồi Rừng ngập mặn Cần Giờ trung hòa khí thải,
+              trả lại sự xanh mát cho thiên nhiên bạn nhé!
               <div className="absolute left-1/2 -translate-x-1/2 top-full w-0 h-0 border-l-4 border-r-4 border-t-4 border-transparent border-t-gray-800" />
             </div>
           )}
