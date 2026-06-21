@@ -15,7 +15,7 @@ const WateringButton = ({
     <button
       onClick={onWater}
       disabled={!canWater || isWatering || isMaxed}
-      className={`w-full flex items-center justify-center gap-3 font-bold py-3.5 rounded-xl transition-all duration-200 shadow-md active:scale-95
+      className={`flex w-full items-center justify-center gap-3 font-bold py-3.5 rounded-xl transition-all duration-200 shadow-md active:scale-95
         ${
           !canWater || isWatering || isMaxed ?
             "bg-gray-400 opacity-60 cursor-not-allowed"

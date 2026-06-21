@@ -75,7 +75,14 @@ export default function BiosphereAmbassador() {
               isWatering={isWatering}
               treeRef={treeRef}
             />
-
+            <div className="sm:hidden w-full">
+              <WateringButton
+                canWater={canWater}
+                isWatering={isWatering}
+                isMaxed={waterDrops >= TOTAL_DROPS_NEEDED}
+                onWater={handleWater}
+              />
+            </div>
             <div className="flex-1 w-full space-y-4 bg-white backdrop-blur-sm rounded-xl p-4 sm:p-6">
               <ProgressSection
                 waterDrops={waterDrops}
@@ -84,13 +91,14 @@ export default function BiosphereAmbassador() {
               />
 
               <WateringInfo />
-
-              <WateringButton
-                canWater={canWater}
-                isWatering={isWatering}
-                isMaxed={waterDrops >= TOTAL_DROPS_NEEDED}
-                onWater={handleWater}
-              />
+              <div className="hidden sm:block">
+                <WateringButton
+                  canWater={canWater}
+                  isWatering={isWatering}
+                  isMaxed={waterDrops >= TOTAL_DROPS_NEEDED}
+                  onWater={handleWater}
+                />
+              </div>
 
               {showSaved && <SavedBadge />}
 
