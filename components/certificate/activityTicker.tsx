@@ -162,7 +162,7 @@ export default function SocialSignalPage() {
                   Chứng Nhận Xanh
                 </h2>
                 <p className="mt-1 text-sm font-semibold text-[#2D6A4F]">
-                  Nguyễn Minh Anh • Đại Sứ Sinh Quyển
+                  Nguyễn Minh Anh • Đại sứ sinh Quyển
                 </p>
               </div>
 

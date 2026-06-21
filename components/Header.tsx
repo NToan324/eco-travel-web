@@ -10,7 +10,7 @@ import Image from "next/image";
 const navLinks = [
   { href: "/", label: "Trang chủ" },
   { href: "/transparency", label: "Minh bạch" },
-  { href: "/me", label: "Trang cá nhân" },
+  { href: "profile", label: "Trang cá nhân" },
 ];
 
 export default function Header() {
