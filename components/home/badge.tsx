@@ -11,7 +11,7 @@ interface BadgeProps {
 const Badge = ({
   icon = <LuLeaf />,
   value = 30000,
-  description = "Offset offer",
+  description = "Khoản bù đắp",
 }: BadgeProps = {}) => {
   return (
     <div className="w-70 h-44 p-4 rounded-2xl text-primary border border-gray-300 flex flex-col justify-between items-start gap-1 bg-white">
