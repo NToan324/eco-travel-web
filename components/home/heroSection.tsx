@@ -7,7 +7,7 @@ const HeroSection = () => {
     <div>
       <Banner />
       <div className="space-y-4">
-        <h1 className="text-[clamp(2rem,5vw,3.75rem)] font-bold text-gray-800 mt-4 uppercase leading-14 md:leading-20">
+        <h1 className="text-[clamp(2rem,5vw,3.75rem)] font-bold text-primary mt-4 uppercase leading-14 md:leading-20">
           Nuôi cây ảo Trồng cây thật
         </h1>
         <p>

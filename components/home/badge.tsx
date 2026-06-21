@@ -20,10 +20,12 @@ const Badge = ({
         {icon}
       </div>
       {/* Money */}
-      <div className="font-bold text-2xl sm:text-3xl md:text-4xl">
+      <div className="font-bold text-[clamp(1rem,4vw,1.5rem)] sm:text-3xl md:text-4xl">
         {typeof value === "number" ? formatMoney(value) : value}
       </div>
-      <span className="text-sm text-black/70 font-semibold">{description}</span>
+      <span className="text-sm text-black/70 font-semibold whitespace-nowrap">
+        {description}
+      </span>
     </div>
   );
 };

@@ -9,7 +9,7 @@ const paymentMethods = [
         alt="MoMo"
         width={20}
         height={20}
-        className="w-5 h-5 object-contain"
+        className="w-5 h-5 object-contain sm:scale-100 scale-75"
       />
     ),
     activeClass:
@@ -21,9 +21,9 @@ const paymentMethods = [
       <Image
         src="/vnpay.png"
         alt="VNPay"
-        width={48}
+        width={20}
         height={20}
-        className="w-12 h-5 object-contain"
+        className="h-5 object-contain sm:scale-100 scale-75"
       />
     ),
     activeClass:
@@ -37,7 +37,7 @@ const paymentMethods = [
         alt="Thẻ"
         width={20}
         height={20}
-        className="w-5 h-5 object-contain"
+        className="w-5 h-5 object-contain sm:scale-100 scale-75"
       />
     ),
     activeClass: "border-gray-800 text-gray-800 bg-gray-50 hover:bg-gray-100",
