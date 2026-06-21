@@ -43,7 +43,7 @@ export default function CarbonDashboard() {
               <p className="text-xs font-bold text-gray-400 uppercase tracking-widest mb-4">
                 Tổng quan tác động
               </p>
-              <div className="flex gap-3 flex-wrap">
+              <div className="flex flex-col sm:flex-row gap-3 flex-wrap">
                 <StatCard
                   icon={<IconTree />}
                   value="1.248"
