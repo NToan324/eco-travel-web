@@ -64,19 +64,19 @@ export default function BiosphereAmbassador() {
 
   return (
     <>
-      <div className="min-h-screen bg-[#002a04] flex flex-col items-center justify-start p-8 gap-8">
+      <div className="min-h-screen bg-[#002a04] flex flex-col items-center justify-start p-4 sm:p-6 lg:p-8 gap-6 sm:gap-8">
         <AmbassadorHeader />
-        <div className="relative rounded-3xl h-full overflow-hidden px-8 mx-10 space-y-8">
+        <div className="relative rounded-3xl h-full overflow-hidden w-full max-w-6xl px-2 sm:px-6 lg:px-8 mx-auto space-y-8">
           {showConfetti && <Confetti />}
 
-          <div className="rounded-2xl p-6 flex flex-col md:flex-row gap-6 items-start">
+          <div className="rounded-2xl p-2 sm:p-6 flex flex-col md:flex-row gap-6 items-start">
             <TreeContainer
               stage={stage}
               isWatering={isWatering}
               treeRef={treeRef}
             />
 
-            <div className="flex-1 space-y-4 bg-white backdrop-blur-sm rounded-xl p-6">
+            <div className="flex-1 w-full space-y-4 bg-white backdrop-blur-sm rounded-xl p-4 sm:p-6">
               <ProgressSection
                 waterDrops={waterDrops}
                 hasWatered={hasWatered}

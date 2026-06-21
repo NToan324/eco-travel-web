@@ -133,10 +133,10 @@ export default function SocialSignalPage() {
         .animate-fadeIn { animation: fadeIn 0.4s ease-out both; }
       `}</style>
 
-      <div className="min-h-screen bg-white px-4 py-16 flex flex-col items-center">
+      <div className="min-h-screen bg-white px-4 py-10 sm:py-16 flex flex-col items-center">
         {/* Tiêu đề chính */}
-        <div className="text-center max-w-2xl mb-12">
-          <h1 className="text-3xl md:text-4xl font-black text-[#1B4332] leading-tight">
+        <div className="text-center max-w-2xl mb-8 sm:mb-12">
+          <h1 className="text-2xl sm:text-3xl md:text-4xl font-black text-[#1B4332] leading-tight">
             Biến mỗi đóng góp xanh thành một thông điệp lan tỏa mạnh mẽ.
           </h1>
           <p className="mt-4 text-gray-500 text-sm md:text-base leading-relaxed">
@@ -149,15 +149,15 @@ export default function SocialSignalPage() {
         {/* Hai Thẻ Nội Dung */}
         <div className="w-full max-w-4xl flex flex-col md:flex-row gap-5 items-start">
           {/* Thẻ Chứng Nhận (Certificate Card) */}
-          <div className="flex-1 flex flex-col">
-            <div className="bg-white border border-gray-200 rounded-2xl shadow-sm p-8 flex flex-col items-center text-center gap-4 flex-1">
+          <div className="flex-1 w-full flex flex-col">
+            <div className="bg-white border border-gray-200 rounded-2xl shadow-sm p-5 sm:p-8 flex flex-col items-center text-center gap-4 flex-1">
               {/* Huy hiệu */}
               <div className="w-16 h-16 rounded-full bg-[#1B4332] flex items-center justify-center">
                 <HiOutlineCheckCircle size={32} color="white" />
               </div>
 
               <div>
-                <h2 className="text-2xl font-bold text-[#1B4332]">
+                <h2 className="text-xl sm:text-2xl font-bold text-[#1B4332]">
                   Chứng Nhận Xanh
                 </h2>
                 <p className="mt-1 text-sm font-semibold text-[#2D6A4F]">
@@ -195,7 +195,7 @@ export default function SocialSignalPage() {
             </div>
 
             {/* Các nút hành động dưới thẻ */}
-            <div className="flex gap-3 mt-4">
+            <div className="flex flex-col sm:flex-row gap-3 mt-4">
               <CertificateButton
                 userName="Nguyễn Minh Anh"
                 ecoTitle="Sổ giờ xanh"
@@ -213,9 +213,9 @@ export default function SocialSignalPage() {
           </div>
 
           {/* Thẻ Cộng Đồng Du Khách (Like-Minded Travelers Card) */}
-          <div className="flex-1 bg-[#1B4332] rounded-2xl shadow-lg p-7 flex flex-col gap-5">
+          <div className="flex-1 w-full bg-[#1B4332] rounded-2xl shadow-lg p-5 sm:p-7 flex flex-col gap-5">
             <div>
-              <h2 className="text-xl font-bold text-white">
+              <h2 className="text-lg sm:text-xl font-bold text-white">
                 Gặp Gỡ Những Du Khách Cùng Chí Hướng
               </h2>
               <p className="mt-2 text-white/70 text-sm leading-relaxed">

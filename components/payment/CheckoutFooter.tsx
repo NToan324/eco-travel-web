@@ -23,7 +23,7 @@ export default function CheckoutFooter({
           variant="default"
           type="button"
           onClick={onSubmit}
-          className="bg-white text-black h-10 hover:bg-gray-100 font-bold py-3 px-5 rounded-xl transition-colors whitespace-nowrap"
+          className="sm:w-52 w-full bg-white text-black h-10 hover:bg-gray-100 font-bold py-3 px-5 rounded-xl transition-colors whitespace-nowrap"
         >
           {ctaLabel}
         </Button>

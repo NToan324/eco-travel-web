@@ -131,7 +131,7 @@ export default function TransparencyDashboard() {
           </p>
 
           <Button
-            className="flex h-12 items-center gap-2 bg-[#1B4332] hover:bg-[#2D6A4F] text-white text-sm font-bold py-3 px-5 rounded-xl transition-colors whitespace-nowrap shrink-0"
+            className="md:w-52 w-full flex h-12 items-center gap-2 bg-[#1B4332] hover:bg-[#2D6A4F] text-white text-sm font-bold py-3 px-5 rounded-xl transition-colors whitespace-nowrap shrink-0"
             onClick={() => router.push("/transparency")}
           >
             Mở Bảng điều khiển
