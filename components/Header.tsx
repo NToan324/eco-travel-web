@@ -11,7 +11,6 @@ const navLinks = [
   { href: "/transparency", label: "Minh bạch" },
   { href: "/campaign", label: "Chiến dịch" },
   { href: "/impact", label: "Tác động" },
-  { href: "/about", label: "Về chúng tôi" },
 ];
 
 export default function Header() {
@@ -23,7 +22,7 @@ export default function Header() {
         <h1 className="text-lg sm:text-xl font-semibold">Eco Travel</h1>
 
         {/* Desktop nav */}
-        <nav className="hidden lg:flex font-semibold items-center gap-6">
+        <nav className="hidden lg:flex font-semibold items-center gap-10">
           {navLinks.map((link) => (
             <Link key={link.href} href={link.href} className="hover:underline">
               {link.label}

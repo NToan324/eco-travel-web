@@ -29,69 +29,57 @@ function TreeIllustration({
         fill="none"
         xmlns="http://www.w3.org/2000/svg"
       >
+        <defs>
+          {/* Leaf gradient */}
+          <linearGradient id="leafGrad" x1="0" y1="0" x2="0" y2="1">
+            <stop offset="0%" stopColor="#74C69D" />
+            <stop offset="100%" stopColor="#1B4332" />
+          </linearGradient>
+
+          {/* Trunk gradient */}
+          <linearGradient id="trunkGrad" x1="0" y1="0" x2="0" y2="1">
+            <stop offset="0%" stopColor="#A0714F" />
+            <stop offset="100%" stopColor="#5C3A21" />
+          </linearGradient>
+        </defs>
+
+        {/* shadow */}
+        <ellipse
+          cx="100"
+          cy="172"
+          rx="45"
+          ry="10"
+          fill="black"
+          opacity="0.12"
+        />
+
         {/* Pot */}
         <rect x="65" y="165" width="70" height="50" rx="8" fill="#8B5E3C" />
         <rect x="58" y="158" width="84" height="16" rx="6" fill="#A0714F" />
 
-        {/* Stem */}
-        {stage === "sprout" && (
-          <line
-            x1="100"
-            y1="157"
-            x2="100"
-            y2="120"
-            stroke="#2D6A4F"
-            strokeWidth="5"
-            strokeLinecap="round"
-          />
-        )}
-
-        {stage === "seedling" && (
-          <line
-            x1="100"
-            y1="157"
-            x2="100"
-            y2="95"
-            stroke="#2D6A4F"
-            strokeWidth="5"
-            strokeLinecap="round"
-          />
-        )}
-
-        {(stage === "sapling" || stage === "young" || stage === "mature") && (
-          <line
-            x1="100"
-            y1="157"
-            x2="100"
-            y2="70"
-            stroke="#2D6A4F"
+        {/* ================= TRUNK ================= */}
+        {stage !== "sprout" && (
+          <path
+            d="M100 157 C98 130, 102 110, 100 70"
+            stroke="url(#trunkGrad)"
             strokeWidth="6"
             strokeLinecap="round"
+            fill="none"
           />
         )}
+
+        {/* ================= STAGES ================= */}
 
         {/* SPROUT */}
         {stage === "sprout" && (
           <>
-            <ellipse
-              cx="85"
-              cy="118"
-              rx="14"
-              ry="9"
-              fill="#52B788"
-              transform="rotate(-30 85 118)"
+            <path
+              d="M100 157 Q 96 145 100 135"
+              stroke="#2D6A4F"
+              strokeWidth="4"
+              strokeLinecap="round"
             />
-            <ellipse
-              cx="115"
-              cy="118"
-              rx="14"
-              ry="9"
-              fill="#40916C"
-              transform="rotate(30 115 118)"
-            />
-            <circle cx="90" cy="105" r="4" fill="#95D5B2" />
-            <circle cx="100" cy="100" r="4" fill="#95D5B2" />
-            <circle cx="110" cy="105" r="4" fill="#B7E4C7" />
+            <ellipse cx="101" cy="133" rx="5" ry="3.5" fill="#74C69D" />
           </>
         )}
 
@@ -99,147 +87,68 @@ function TreeIllustration({
         {stage === "seedling" && (
           <>
             <ellipse
-              cx="80"
-              cy="95"
-              rx="20"
-              ry="12"
-              fill="#52B788"
-              transform="rotate(-25 80 95)"
+              cx="103"
+              cy="105"
+              rx="6"
+              ry="3.5"
+              fill="#74C69D"
+              transform="rotate(20 103 105)"
             />
-            <ellipse
-              cx="120"
-              cy="95"
-              rx="20"
-              ry="12"
-              fill="#40916C"
-              transform="rotate(25 120 95)"
-            />
-            <ellipse cx="100" cy="82" rx="18" ry="11" fill="#74C69D" />
           </>
         )}
 
         {/* SAPLING */}
         {stage === "sapling" && (
           <>
-            <ellipse
-              cx="75"
-              cy="110"
-              rx="24"
-              ry="14"
-              fill="#52B788"
-              transform="rotate(-20 75 110)"
-            />
-            <ellipse
-              cx="125"
-              cy="110"
-              rx="24"
-              ry="14"
-              fill="#40916C"
-              transform="rotate(20 125 110)"
-            />
-            <ellipse cx="100" cy="90" rx="30" ry="18" fill="#74C69D" />
+            <path d="M100 120 C95 110, 110 105, 100 95" fill="url(#leafGrad)" />
+            <path d="M100 110 C90 100, 80 110, 85 120" fill="#52B788" />
+            <path d="M100 110 C110 100, 120 110, 115 120" fill="#40916C" />
           </>
         )}
 
         {/* YOUNG */}
         {stage === "young" && (
           <>
-            <ellipse
-              cx="70"
-              cy="120"
-              rx="28"
-              ry="16"
-              fill="#40916C"
-              transform="rotate(-20 70 120)"
+            <path
+              d="M100 95
+                 C70 70, 50 110, 80 120
+                 C60 140, 90 150, 100 130
+                 C110 150, 140 140, 120 120
+                 C150 110, 130 70, 100 95 Z"
+              fill="url(#leafGrad)"
+              opacity="0.95"
             />
-            <ellipse
-              cx="130"
-              cy="120"
-              rx="28"
-              ry="16"
-              fill="#2D6A4F"
-              transform="rotate(20 130 120)"
-            />
-            <ellipse cx="100" cy="100" rx="36" ry="22" fill="#52B788" />
           </>
         )}
 
         {/* MATURE */}
-        {/* MATURE - FULL TREE WITH DEPTH */}
         {stage === "mature" && (
           <>
-            {/* BACK LAYER LEAVES (shadow layer) */}
-            <ellipse
-              cx="60"
-              cy="120"
-              rx="38"
-              ry="22"
-              fill="#1B4332"
-              opacity="0.9"
-            />
-            <ellipse
-              cx="140"
-              cy="120"
-              rx="38"
-              ry="22"
-              fill="#1B4332"
-              opacity="0.9"
+            {/* canopy main blob */}
+            <path
+              d="M100 45
+                 C70 35, 45 70, 60 95
+                 C35 120, 60 150, 100 135
+                 C140 150, 165 120, 140 95
+                 C160 70, 130 35, 100 45 Z"
+              fill="url(#leafGrad)"
             />
 
-            <ellipse
-              cx="70"
-              cy="95"
-              rx="32"
-              ry="20"
+            {/* inner depth */}
+            <path
+              d="M100 60
+                 C75 55, 60 80, 70 100
+                 C60 120, 80 130, 100 120
+                 C120 130, 140 120, 130 100
+                 C140 80, 125 55, 100 60 Z"
               fill="#2D6A4F"
-              opacity="0.9"
-            />
-            <ellipse
-              cx="130"
-              cy="95"
-              rx="32"
-              ry="20"
-              fill="#2D6A4F"
-              opacity="0.9"
-            />
-
-            {/* MAIN CANOPY */}
-            <ellipse cx="100" cy="80" rx="55" ry="35" fill="#40916C" />
-            <ellipse cx="75" cy="85" rx="40" ry="28" fill="#2D6A4F" />
-            <ellipse cx="125" cy="85" rx="40" ry="28" fill="#2D6A4F" />
-
-            {/* TOP HIGHLIGHT LAYER */}
-            <ellipse cx="100" cy="55" rx="30" ry="20" fill="#74C69D" />
-            <ellipse cx="85" cy="60" rx="22" ry="14" fill="#52B788" />
-            <ellipse cx="115" cy="60" rx="22" ry="14" fill="#52B788" />
-
-            {/* SMALL LEAF DETAILS (spark depth) */}
-            <circle cx="60" cy="75" r="6" fill="#95D5B2" opacity="0.8" />
-            <circle cx="140" cy="75" r="6" fill="#95D5B2" opacity="0.8" />
-            <circle cx="100" cy="45" r="5" fill="#B7E4C7" />
-
-            {/* TRUNK DETAIL IMPROVED */}
-            <line
-              x1="100"
-              y1="157"
-              x2="100"
-              y2="70"
-              stroke="#2D6A4F"
-              strokeWidth="7"
-              strokeLinecap="round"
-            />
-
-            {/* trunk highlight */}
-            <line
-              x1="98"
-              y1="157"
-              x2="98"
-              y2="80"
-              stroke="#52B788"
-              strokeWidth="2"
-              strokeLinecap="round"
               opacity="0.6"
             />
+
+            {/* highlight */}
+            <circle cx="85" cy="70" r="10" fill="#B7E4C7" opacity="0.7" />
+            <circle cx="120" cy="75" r="8" fill="#95D5B2" opacity="0.6" />
+            <circle cx="100" cy="55" r="6" fill="#D8F3DC" />
           </>
         )}
       </svg>

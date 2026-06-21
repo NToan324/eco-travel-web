@@ -103,18 +103,19 @@ export default function SocialSignalPage() {
 
   const handleDownload = async () => {
     setDownloaded(true);
-    const data: CertificateData = {
-      userName: "Nguyễn Minh Anh",
-      ecoTitle: "Sổ giờ xanh",
-      achievementText: `Tôi đã trung hòa 45 kg CO2 cho hành trình đến TP. Hồ Chí Minh`,
-      destination: "TP. Hồ Chí Minh",
-      co2Kg: 45,
-      shareUrl:
-        typeof window !== "undefined" ?
-          window.location.origin
-        : "https://ecotrip.vn",
-    };
-    const url = await generateCertificateImage(data);
+    // const data: CertificateData = {
+    //   userName: "Nguyễn Minh Anh",
+    //   ecoTitle: "Sổ giờ xanh",
+    //   achievementText: `Tôi đã trung hòa 45 kg CO2 cho hành trình đến TP. Hồ Chí Minh`,
+    //   destination: "TP. Hồ Chí Minh",
+    //   co2Kg: 45,
+    //   shareUrl:
+    //     typeof window !== "undefined" ?
+    //       window.location.origin
+    //     : "https://ecotrip.vn",
+    // };
+    // const url = await generateCertificateImage(data);
+    const url = "/certificate.jpeg";
     const link = document.createElement("a");
 
     link.href = url;
@@ -161,7 +162,7 @@ export default function SocialSignalPage() {
                   Chứng Nhận Xanh
                 </h2>
                 <p className="mt-1 text-sm font-semibold text-[#2D6A4F]">
-                  Nhật Toàn • Đại Sứ Sinh Quyển
+                  Nguyễn Minh Anh • Đại Sứ Sinh Quyển
                 </p>
               </div>
 
@@ -196,12 +197,7 @@ export default function SocialSignalPage() {
 
             {/* Các nút hành động dưới thẻ */}
             <div className="flex flex-col sm:flex-row gap-3 mt-4">
-              <CertificateButton
-                userName="Nguyễn Minh Anh"
-                ecoTitle="Sổ giờ xanh"
-                co2Kg={45}
-                destination="TP. Hồ Chí Minh"
-              />
+              <CertificateButton />
               <button
                 onClick={handleDownload}
                 className="flex-1 flex items-center justify-center gap-2 border-2 border-[#1B4332] text-[#1B4332] text-sm font-bold py-3.5 rounded-xl hover:bg-[#f0faf4] transition-colors"
@@ -216,7 +212,7 @@ export default function SocialSignalPage() {
           <div className="flex-1 w-full bg-[#1B4332] rounded-2xl shadow-lg p-5 sm:p-7 flex flex-col gap-5">
             <div>
               <h2 className="text-lg sm:text-xl font-bold text-white">
-                Gặp Gỡ Những Du Khách Cùng Chí Hướng
+                Bạn bè trên Facebook của bạn
               </h2>
               <p className="mt-2 text-white/70 text-sm leading-relaxed">
                 Bảng cập nhật hoạt động trực tuyến giúp ghi nhận đóng góp tức

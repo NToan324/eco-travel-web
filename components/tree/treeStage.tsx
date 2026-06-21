@@ -64,7 +64,7 @@ export default function BiosphereAmbassador() {
 
   return (
     <>
-      <div className="min-h-screen bg-[#002a04] flex flex-col items-center justify-start p-4 sm:p-6 lg:p-8 gap-6 sm:gap-8">
+      <div className="min-h-screen bg-[#002a04] flex flex-col items-center justify-start p-4 sm:p-6 lg:p-8 gap-6 sm:gap-8 rounded-4xl">
         <AmbassadorHeader />
         <div className="relative rounded-3xl h-full overflow-hidden w-full max-w-6xl px-2 sm:px-6 lg:px-8 mx-auto space-y-8">
           {showConfetti && <Confetti />}

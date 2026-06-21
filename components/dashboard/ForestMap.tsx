@@ -41,7 +41,8 @@ export default function ForestMap() {
         <div className="absolute bottom-4 left-4 bg-white/30 border border-white/50 rounded-xl shadow-xl px-4 py-3 max-w-55">
           <p className="font-bold text-white text-sm">Cây #1245</p>
           <p className="text-white text-xs mt-0.5 leading-relaxed">
-            Loài: Cây ngập mặn • Trồng ngày 20/06/2026 • Tài trợ bởi Nhật Toàn
+            Loài: Cây ngập mặn • Trồng ngày 20/06/2026 • Tài trợ bởi Nguyễn Minh
+            Anh
           </p>
         </div>
       )}
