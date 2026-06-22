@@ -44,7 +44,9 @@ export default function Header() {
           ))}
         </nav>
         {/* Desktop button */}
-        <ContactDialog />
+        <div className="lg:block hidden">
+          <ContactDialog />
+        </div>
         {/* Mobile toggle */}
         <button
           className="lg:hidden text-2xl"
@@ -71,7 +73,9 @@ export default function Header() {
                 {link.label}
               </Link>
             ))}
-            <ContactDialog />
+            <div className="block lg:hidden">
+              <ContactDialog />
+            </div>
           </nav>
         </div>
       )}

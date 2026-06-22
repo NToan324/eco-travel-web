@@ -13,7 +13,7 @@ export default function ContactDialog() {
   return (
     <Dialog>
       <DialogTrigger asChild>
-        <Button variant="default" className="hidden lg:flex w-32 h-10">
+        <Button variant="default" className="flex w-32 h-10">
           Liên hệ
           <TbLocation />
         </Button>
