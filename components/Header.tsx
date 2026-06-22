@@ -6,6 +6,7 @@ import { Button } from "./ui/button";
 import { TbLocation } from "react-icons/tb";
 import { HiMenu, HiX } from "react-icons/hi";
 import Image from "next/image";
+import ContactDialog from "./contact/ContactDialog";
 
 const navLinks = [
   { href: "/", label: "Trang chủ" },
@@ -30,7 +31,6 @@ export default function Header() {
             height={40}
           />
         </div>
-
         {/* Desktop nav */}
         <nav className="hidden lg:flex font-semibold items-center gap-10">
           {navLinks.map((link) => (
@@ -43,13 +43,8 @@ export default function Header() {
             </Link>
           ))}
         </nav>
-
         {/* Desktop button */}
-        <Button variant="default" className="hidden lg:flex w-32 h-10">
-          Liên hệ
-          <TbLocation />
-        </Button>
-
+        <ContactDialog />
         {/* Mobile toggle */}
         <button
           className="lg:hidden text-2xl"

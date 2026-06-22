@@ -12,7 +12,7 @@ import type {
 export const mockUser: UserProfile = {
   name: "Vũ Hoàng Anh Thy",
   membershipLabel: "Thành viên Xanh",
-  avatarUrl: "https://i.pravatar.cc/160?img=47",
+  avatarUrl: "/avatar.jpeg",
 };
 
 export const mockEcoBadge: EcoBadge = {
@@ -69,26 +69,38 @@ export const mockMissions: MissionItem[] = [
 export const mockFriends: FriendActivity[] = [
   {
     id: "f1",
-    name: "Nguyễn Minh",
-    avatarUrl: "https://i.pravatar.cc/80?img=12",
+    name: "Gấm Nguyễn",
+    avatarUrl: "/gam-avt.png",
     status: "1 thành viên hoạt động",
   },
   {
     id: "f2",
-    name: "Yến Xinh",
-    avatarUrl: "https://i.pravatar.cc/80?img=32",
+    name: "Nguyễn Đào",
+    avatarUrl: "/dao-avt.png",
     status: "Thành viên hoạt động",
   },
   {
     id: "f3",
-    name: "Ngọc Linh",
-    avatarUrl: "https://i.pravatar.cc/80?img=25",
+    name: "Thầy Henry",
+    avatarUrl: "/henry-avt.png",
     status: "Thành viên hoạt động",
   },
   {
     id: "f4",
-    name: "Quang Minh",
-    avatarUrl: "https://i.pravatar.cc/80?img=8",
+    name: "Lê Chánh Tín",
+    avatarUrl: "https://i.pravatar.cc/80?img=4",
+    status: "Thành viên hoạt động",
+  },
+  {
+    id: "f5",
+    name: "Cô Hoàng Thị Vân",
+    avatarUrl: "https://i.pravatar.cc/80?img=15",
+    status: "Thành viên hoạt động",
+  },
+  {
+    id: "f6",
+    name: "Lâm Quyền",
+    avatarUrl: "/quyen-avt.png",
     status: "Thành viên hoạt động",
   },
 ];
