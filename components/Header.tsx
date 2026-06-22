@@ -71,10 +71,7 @@ export default function Header() {
                 {link.label}
               </Link>
             ))}
-            <Button variant="default" className="w-32 h-10 mt-2">
-              Liên hệ
-              <TbLocation />
-            </Button>
+            <ContactDialog />
           </nav>
         </div>
       )}
