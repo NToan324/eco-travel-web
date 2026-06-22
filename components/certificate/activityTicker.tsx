@@ -104,7 +104,7 @@ export default function SocialSignalPage() {
   const handleDownload = async () => {
     setDownloaded(true);
     // const data: CertificateData = {
-    //   userName: "Nguyễn Minh Anh",
+    //   userName: "Vũ Hoàng Anh Thy",
     //   ecoTitle: "Sổ giờ xanh",
     //   achievementText: `Tôi đã trung hòa 45 kg CO2 cho hành trình đến TP. Hồ Chí Minh`,
     //   destination: "TP. Hồ Chí Minh",
@@ -162,7 +162,7 @@ export default function SocialSignalPage() {
                   Chứng Nhận Xanh
                 </h2>
                 <p className="mt-1 text-sm font-semibold text-[#2D6A4F]">
-                  Nguyễn Minh Anh • Đại sứ sinh Quyển
+                  Vũ Hoàng Anh Thy • Đại sứ sinh Quyển
                 </p>
               </div>
 

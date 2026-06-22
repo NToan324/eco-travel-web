@@ -10,7 +10,7 @@ import type {
 } from "@/types/profile";
 
 export const mockUser: UserProfile = {
-  name: "Nguyễn Minh Anh",
+  name: "Vũ Hoàng Anh Thy",
   membershipLabel: "Thành viên Xanh",
   avatarUrl: "https://i.pravatar.cc/160?img=47",
 };
