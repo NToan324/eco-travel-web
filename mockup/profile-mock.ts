@@ -94,7 +94,7 @@ export const mockFriends: FriendActivity[] = [
   {
     id: "f5",
     name: "Cô Hoàng Thị Vân",
-    avatarUrl: "https://i.pravatar.cc/80?img=15",
+    avatarUrl: "/van-avt.png",
     status: "Thành viên hoạt động",
   },
   {
