@@ -21,9 +21,12 @@ export default function Header() {
     <header className="w-full text-black py-4 px-4 sm:px-6 relative">
       <div className="max-w-6xl mx-auto flex items-center justify-between">
         <div className="flex items-center gap-2">
-          <h1 className="text-sm sm:text-lg text-primary font-semibold">
-            Eco Travel
-          </h1>
+          <Image
+            src="/logo-eco.png"
+            alt="Eco Travel Logo"
+            width={100}
+            height={20}
+          />
           <Image
             src="/logo.png"
             alt="Eco Travel Logo"
